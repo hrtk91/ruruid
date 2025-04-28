@@ -1,0 +1,9 @@
+[package]
+name = "ruruid"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.37", features = ["derive"] }
+copypasta = "0.10.2"
+uuid = { version = "1.16.0", features = ["v4"] }
