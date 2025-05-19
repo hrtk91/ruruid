@@ -3,6 +3,7 @@ use copypasta::{ClipboardContext, ClipboardProvider};
 
 #[derive(Parser, Debug)]
 struct Ruruid {
+    #[clap(short = 'n', default_value_t = 1)]
     num: u32,
 }
 fn main() {
@@ -22,7 +23,7 @@ fn main() {
         }))
         .expect("failed set text for clipboard");
     println!(
-        "uuid's clipped!\n----------\n{}",
+        "{}",
         clipboard
             .get_contents()
             .expect("failed to get clipboard contents")
